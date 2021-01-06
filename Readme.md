@@ -1,4 +1,4 @@
-                                            Manage Azure Event Hubs with ASO on Kubernetes
+                                   Manage Azure Event Hubs with ASO on Kubernetes
                                                      
                                                      
 In this Demo:-
@@ -6,7 +6,7 @@ In this Demo:-
 How to set it up and use it to provision Azure Event Hubs,
 Deploy apps to Kubernetes which use the Azure Event Hubs cluster.
 
-                                            Azure Service Operator — manage your Azure resources with Kubernetes
+                                   Azure Service Operator — manage your Azure resources with Kubernetes
                                                     
 What Azure Service Operator is and how it works, Link below.
 
@@ -51,7 +51,7 @@ Once that's done, simply configure kubectl to point to it
 
 az aks get-credentials --resource-group <CLUSTER_RESOURCE_GROUP> --name <CLUSTER_NAME>
  
-                                                 Install Azure Service Operator
+                                              Install Azure Service Operator
                                                         
 Start by installing cert-manager     
 
