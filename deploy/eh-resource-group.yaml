@@ -3,4 +3,4 @@ kind: ResourceGroup
 metadata:
   name: eh-aso-rg
 spec:
-  location: southeastasia
+  location: centralindia
