@@ -23,21 +23,21 @@ AAD Pod Identity is part of the Azure Service Operator and is provided as a Helm
 
 So far Azure Service Operator supports the following Azure resources:
 
-Resource Group
-Event Hubs
-Azure SQL
-Azure Database for PostgreSQL
-Azure Database for MySQL
-Azure Key Vault
-Azure Cache for Redis
-Storage Account
-Blob Storage
-Virtual Network
-Application Insights
-API Management
-Cosmos DB
-Virtual Machine
-Virtual Machine Scale Set
+Resource Group,
+Event Hubs,
+Azure SQL,
+Azure Database for PostgreSQL,
+Azure Database for MySQL,
+Azure Key Vault,
+Azure Cache for Redis,
+Storage Account,
+Blob Storage,
+Virtual Network,
+Application Insights,
+API Management,
+Cosmos DB,
+Virtual Machine,
+Virtual Machine Scale Set.
 
 Get started with Azure Service Operator
 
