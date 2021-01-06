@@ -6,7 +6,7 @@ In this Demo:-
 How to set it up and use it to provision Azure Event Hubs,
 Deploy apps to Kubernetes which use the Azure Event Hubs cluster.
 
-                                   Azure Service Operator — manage your Azure resources with Kubernetes
+                          Azure Service Operator — manage your Azure resources with Kubernetes
                                                     
 What Azure Service Operator is and how it works, Link below.
 
@@ -23,21 +23,21 @@ AAD Pod Identity is part of the Azure Service Operator and is provided as a Helm
 
 So far Azure Service Operator supports the following Azure resources:
 
-Resource Group,
-Event Hubs,
-Azure SQL,
-Azure Database for PostgreSQL,
-Azure Database for MySQL,
-Azure Key Vault,
-Azure Cache for Redis,
-Storage Account,
-Blob Storage,
-Virtual Network,
-Application Insights,
-API Management,
-Cosmos DB,
-Virtual Machine,
-Virtual Machine Scale Set.
+        Resource Group,
+        Event Hubs,
+        Azure SQL,
+        Azure Database for PostgreSQL,
+        Azure Database for MySQL,
+        Azure Key Vault,
+        Azure Cache for Redis,
+        Storage Account,
+        Blob Storage,
+        Virtual Network,
+        Application Insights,
+        API Management,
+        Cosmos DB,
+        Virtual Machine,
+        Virtual Machine Scale Set.
 
 Get started with Azure Service Operator
 
@@ -49,7 +49,7 @@ Although the steps outlined in this blog should work with any Kubernetes cluster
 
 Once that's done, simply configure kubectl to point to it
 
-az aks get-credentials --resource-group <CLUSTER_RESOURCE_GROUP> --name <CLUSTER_NAME>
+      az aks get-credentials --resource-group <CLUSTER_RESOURCE_GROUP> --name <CLUSTER_NAME>
  
                                               Install Azure Service Operator
                                                         
@@ -65,10 +65,10 @@ kubectl label namespace cert-manager cert-manager.io/disable-validation=true
 
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.12.0/cert-manager.yaml
 
-//make sure cert manager is up and running
-kubectl rollout status -n cert-manager deploy/cert-manager-webhook
+        //make sure cert manager is up and running
+        kubectl rollout status -n cert-manager deploy/cert-manager-webhook
 
-Authentication
+                                               Authentication
 
 Since the operator will create resource on Azure, we need to authorize it to do so by providing the appropriate credentials. Currently, you can use Managed Identity or Service Principal
 I will be using a Service Principal, so let’s start by creating one (with Azure CLI) using the az ad sp create-for-rbac command
@@ -97,11 +97,12 @@ helm repo add azureserviceoperator https://raw.githubusercontent.com/Azure/azure
 kubectl create namespace $AZURE_SERVICE_OPERATOR_NAMESPACE
 
 Use helm upgrade to initiate setup:
-helm upgrade --install aso azureserviceoperator/azure-service-operator \
--n $AZURE_SERVICE_OPERATOR_NAMESPACE \
---set azureSubscriptionID=$AZURE_SUBSCRIPTION_ID \
---set azureTenantID=$AZURE_TENANT_ID \
---set azureClientID=$AZURE_CLIENT_ID \
+
+                helm upgrade --install aso azureserviceoperator/azure-service-operator \
+                -n $AZURE_SERVICE_OPERATOR_NAMESPACE \
+               --set azureSubscriptionID=$AZURE_SUBSCRIPTION_ID \
+               --set azureTenantID=$AZURE_TENANT_ID \
+               --set azureClientID=$AZURE_CLIENT_ID \
 --set azureClientSecret=$AZURE_CLIENT_SECRET
 
 Before you proceed, wait for the Azure Service Operator Pod to startup
