@@ -51,7 +51,7 @@ Once that's done, simply configure kubectl to point to it
 
 az aks get-credentials --resource-group <CLUSTER_RESOURCE_GROUP> --name <CLUSTER_NAME>
  
-                                                        Install Azure Service Operator
+                                                 Install Azure Service Operator
                                                         
 Start by installing cert-manager     
 
