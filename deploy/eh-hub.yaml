@@ -4,7 +4,7 @@ metadata:
   name: eh-aso-hub
 spec:
   secretName: eh-secret
-  location: southeastasia
+  location: centralindia
   resourceGroup: eh-aso-rg
   namespace: eh-aso-ns
   properties:
