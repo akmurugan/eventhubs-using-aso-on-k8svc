@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eh-producer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eh-producer
+  template:
+    metadata:
+      labels:
+        app: eh-producer
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+        - name: eh-producer
+          image: abhirockzz/eh-kafka-producer
+          env:
+            - name: EVENTHUBS_CONNECTION_STRING
+              valueFrom:
+                secretKeyRef:
+                  name: eh-secret
+                  key: primaryConnectionString
+            - name: EVENTHUBS_NAMESPACE
+              valueFrom:
+                secretKeyRef:
+                  name: eh-secret
+                  key: eventhubNamespace
+            - name: EVENTHUBS_BROKER
+              value: $(EVENTHUBS_NAMESPACE).servicebus.windows.net:9093
+            - name: EVENTHUBS_TOPIC
+              valueFrom:
+                secretKeyRef:
+                  name: eh-secret
+                  key: eventhubName

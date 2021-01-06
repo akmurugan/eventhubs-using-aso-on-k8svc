@@ -1,0 +1,8 @@
+apiVersion: azure.microsoft.com/v1alpha1
+kind: ConsumerGroup
+metadata:
+  name: eh-aso-cg
+spec:
+  resourceGroup: eh-aso-rg
+  namespace: eh-aso-ns
+  eventHub: eh-aso-hub

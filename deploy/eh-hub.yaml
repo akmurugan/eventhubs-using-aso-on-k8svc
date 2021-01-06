@@ -1,0 +1,18 @@
+apiVersion: azure.microsoft.com/v1alpha1
+kind: Eventhub
+metadata:
+  name: eh-aso-hub
+spec:
+  secretName: eh-secret
+  location: southeastasia
+  resourceGroup: eh-aso-rg
+  namespace: eh-aso-ns
+  properties:
+    messageRetentionInDays: 7
+    partitionCount: 3
+  authorizationRule:
+    name: RootManageSharedAccessKey
+    rights:
+      - Listen
+      - Manage
+      - Send

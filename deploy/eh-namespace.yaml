@@ -1,0 +1,15 @@
+apiVersion: azure.microsoft.com/v1alpha1
+kind: EventhubNamespace
+metadata:
+  name: eh-aso-ns
+spec:
+  location: southeastasia
+  resourceGroup: eh-aso-rg
+  sku:
+    name: Standard
+    tier: Standard
+    capacity: 1
+  properties:
+    kafkaEnabled: true
+    isAutoInflateEnabled: false
+    maximumThroughputUnits: 0
