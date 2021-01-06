@@ -98,12 +98,12 @@ kubectl create namespace $AZURE_SERVICE_OPERATOR_NAMESPACE
 
 Use helm upgrade to initiate setup:
 
-                helm upgrade --install aso azureserviceoperator/azure-service-operator \
-                -n $AZURE_SERVICE_OPERATOR_NAMESPACE \
-               --set azureSubscriptionID=$AZURE_SUBSCRIPTION_ID \
-               --set azureTenantID=$AZURE_TENANT_ID \
-               --set azureClientID=$AZURE_CLIENT_ID \
---set azureClientSecret=$AZURE_CLIENT_SECRET
+                 helm upgrade --install aso azureserviceoperator/azure-service-operator \
+                  -n $AZURE_SERVICE_OPERATOR_NAMESPACE \
+                  --set azureSubscriptionID=$AZURE_SUBSCRIPTION_ID \
+                  --set azureTenantID=$AZURE_TENANT_ID \
+                  --set azureClientID=$AZURE_CLIENT_ID \
+                  --set azureClientSecret=$AZURE_CLIENT_SECRET
 
 Before you proceed, wait for the Azure Service Operator Pod to startup
 
