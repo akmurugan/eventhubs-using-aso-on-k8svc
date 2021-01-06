@@ -3,7 +3,7 @@
                                                      
 In this Demo:-
 
-How to set it up and use it to provision Azure Event Hubs
+How to set it up and use it to provision Azure Event Hubs,
 Deploy apps to Kubernetes which use the Azure Event Hubs cluster.
 
                                             Azure Service Operator — manage your Azure resources with Kubernetes
