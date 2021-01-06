@@ -3,7 +3,7 @@ kind: EventhubNamespace
 metadata:
   name: eh-aso-ns
 spec:
-  location: southeastasia
+  location: centralindia
   resourceGroup: eh-aso-rg
   sku:
     name: Standard
