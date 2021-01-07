@@ -59,9 +59,9 @@ https://cert-manager.io/docs/installation/kubernetes/
 
 Steps:-
 
-kubectl create namespace cert-manager
+              kubectl create namespace cert-manager
 
-kubectl label namespace cert-manager cert-manager.io/disable-validation=true
+              kubectl label namespace cert-manager cert-manager.io/disable-validation=true
 
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.12.0/cert-manager.yaml
 
