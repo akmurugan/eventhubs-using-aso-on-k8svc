@@ -93,8 +93,9 @@ I will be using a Service Principal, so let’s start by creating one (with Azur
 
 Add the repo, create namespace
 
-helm repo add azureserviceoperator https://raw.githubusercontent.com/Azure/azure-service-operator/master/charts
-kubectl create namespace $AZURE_SERVICE_OPERATOR_NAMESPACE
+           helm repo add azureserviceoperator https://raw.githubusercontent.com/Azure/azure-service-operator/master/charts
+
+           kubectl create namespace $AZURE_SERVICE_OPERATOR_NAMESPACE
 
 Use helm upgrade to initiate setup:
 
