@@ -116,8 +116,9 @@ Setup Azure Event Hubs components.
 
 Start by cloning the repo:
 
-git clone https://github.com/akmurugan/eventhubs-using-aso-on-k8svc.git
-cd eventhubs-using-aso-on-k8s
+     git clone https://github.com/akmurugan/eventhubs-using-aso-on-k8svc.git
+
+     cd eventhubs-using-aso-on-k8s
 
 Create an Azure Resource Group
 
