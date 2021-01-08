@@ -200,7 +200,9 @@ Once the producer app is up and running, the consumer should kick in, start cons
                         Message topic:"eh-aso-hub" partition:0 offset:8
                         Message content value-2020-07-06 15:37:12.149068005 +0000 UTC m=+73.482564831
 
-In case you want to check producer logs as well: kubectl logs -f $(kubectl get pods -l=app=eh-producer --output=jsonpath={.items..metadata.name})
+In case you want to check producer logs as well:                                                                                                                                                            
+                          
+                        kubectl logs -f $(kubectl get pods -l=app=eh-producer --output=jsonpath={.items..metadata.name})
 
 Awesome, it worked!
 
