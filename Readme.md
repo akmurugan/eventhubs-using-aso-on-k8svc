@@ -38,6 +38,7 @@ So far Azure Service Operator supports the following Azure resources:
         Cosmos DB,
         Virtual Machine,
         Virtual Machine Scale Set.
+        Paas
 
 Get started with Azure Service Operator
 
